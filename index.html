@@ -1,0 +1,485 @@
+  
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>paywandi</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1" />
+    <style>
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: rudaw;
+            src: url(../fontss/rudawregular2.ttf);
+        }
+
+        @font-face {
+            font-family: rabar;
+            src: url(Rabar_009.ttf);
+        }
+
+        html{
+            overflow-x: hidden;
+        }
+      
+
+        body {
+            margin: 0;
+
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            background: #ecf0f3;
+        }
+
+        .gfg-div {
+            margin-top: 100px;
+            font-family: rudaw;
+            /* Login Card Width and height */
+            width: 430px;
+            height: 580px;
+            /* padding */
+            padding: 20px 35px 5px 35px;
+            position: relative;
+
+
+            border-radius: 35px;
+            background: #ecf0f3;
+            box-shadow: -6px -6px 6px rgba(255, 255, 255, 0.8),
+                6px 6px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .gfg-logo {
+            background: url("first.png");
+            background-size: cover;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            /* Box-shadow for logo */
+            box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3,
+                8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+        }
+
+        /* zanin text */
+        .gfg-title {
+            position: relative;
+            text-align: center;
+
+            bottom: 10%;
+            font-size: 34px;
+            margin-left: 250px;
+
+
+            letter-spacing: 0.5px;
+            color: #26648e;
+        }
+
+        /* .gfg-sub-title {
+            text-align: center;
+            font-size: 150px;
+            padding-top: 7px;
+            letter-spacing: 3px;
+            color: #5eaa77;
+        } */
+
+        .gfg-input-fields {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+        
+
+            padding: -5px 5px 15px 20px;
+        }
+
+        .gfg-input-fields input {
+            position: relative;
+            right: 90px;
+            width: 350px;
+            background: none;
+            /* To hide default browser options of input field */
+            border: none;
+            outline: none;
+            font-size: 18px;
+            color: #26648e;
+            padding: 7px 20px 20px 15px;
+
+        }
+
+        .email,
+        .password,
+        .textarea {
+
+            margin-bottom: 20px;
+            border-radius: 20px;
+            /* Box-shadow for 3d */
+            box-shadow: inset 5px 5px 5px #cbced1,
+                inset -5px -5px 5px #ffffff;
+                
+        }
+
+
+        .gfg-button {
+            /* margin-left: 20px; */
+            outline: none;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+            color: #fff;
+            text-align: center;
+            background: #26648e;
+            box-shadow: 7px 7px 8px #cbced1, -7px -7px 8px #ffffff;
+            transition: 0.5s;
+            
+        }
+
+        .gfg-button:hover {
+            background: #26648e;
+        }
+
+        /* .gfg-button:active {
+            background: #4a9764;
+        } */
+
+        .gfg-link {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .gfg-link a {
+            text-decoration: none;
+            color: #aaa;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+
+        .gfg-link a:hover {
+            text-decoration: none;
+            color: #67d18a;
+            font-size: 15px;
+        }
+
+        .row1 {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center the columns horizontally */
+            align-items: center;
+            /* Center items vertically */
+        }
+
+        .column1 {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            /* Center the text */
+        }
+
+
+        .column1 p {
+            text-align: justify
+            font-size: 18px;
+
+            line-height: 2;
+            text-align: left;
+            /* Align text to the left by default */
+        }
+
+
+
+
+
+        .email,
+        .password::placeholder {
+            padding: 10px 0 0 100px;
+        }
+        .textarea {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 5px #cbced1,
+                inset -5px -5px 5px #ffffff;
+}
+
+.textarea textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #26648e;
+    padding: 10px 15px; /* Adjust padding to match input fields */
+    border-radius: 20px; /* Ensure the same border radius as input fields */
+    box-shadow: inset 5px 5px 5px #cbced1,
+                inset -5px -5px 5px #ffffff;
+    resize: none;
+    min-height: 80px; /* Adjust the height as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+        @media (max-width: 900px) {
+
+            .column1 {
+                flex: 100%;
+                max-width: 100%;
+            }
+
+            .column1 .gfg-div {
+
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                top:40px;
+
+            }
+            .column1 p {
+                position: relative;
+                top:60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .column1 {
+                flex: 100%;
+                max-width: 100%;
+            }
+
+          
+            .column1 .gfg-div {
+
+                    display: block;
+                    margin: 0 auto;
+                    position: relative;
+                    top:40px;
+
+                    }
+
+
+            .column1 p {
+                margin-top: 10px;
+                font-size: 16px;
+                text-align: left;
+                /* Align text to the left for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+
+            .column1 p {
+                font-size: 14px;
+                text-align: right;
+                /* Align text to the right for phones */
+            }
+
+                .column1 .gfg-div {
+
+                    width: 350px;   
+                    height: 550px;
+
+                }
+            .gfg-input-fields input{
+               /* background-color: red; */
+               width: 250px;
+               font-size: 14px;
+            }
+            textarea::placeholder{
+               padding: 20px 50px 0 0 ;
+                    
+
+              
+            }
+            .gfg-title{
+                position: relative;
+                right: 35px;
+            }
+            
+
+        }
+
+        ::placeholder {
+
+            float: right;
+            padding-top: 10px;
+
+        }
+        @media (max-width: 480px) {
+            .gfg-button {
+    height: 50px; /* Adjust the button height for smaller screens */
+    font-size: 16px; /* Decrease the font size for better fit */
+   width: 40%;
+  }
+       textarea::placeholder {
+        
+        /* Adjust styles to fit the placeholder properly */
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+        /* Additional styles for Arabic text */
+        .column1[lang="ar"] p {
+            text-align: right;
+            direction: rtl;
+            /* Set the text direction to right-to-left */
+        }
+        #nameError,
+#emailError,
+#messageError,
+#confirmationMessage{
+    color: red;
+    padding: 0 20px 10px;
+}
+#confirmationMessage{
+    padding-top: 30px;
+}
+
+    </style>
+</head>
+
+<body>
+<?php
+
+        include("navigation.php")
+
+?>
+     <div class="row1">
+        <div class="column1" lang="ar" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+            <p>رایانه‌ها به‌عنوان سامانهٔ کنترل برای حجم گسترده‌ای از دستگاه‌های صنعتی و دستگاه‌های مصرفی استفاده می‌شوند. رایانه‌ها به‌عنان دستگاه‌های خانگی مانند دستگاه مایکروویو و دور فرمانها، دستگاه‌های کارخانه‌ای مانند ربات صنعتی و طراحی به کمک رایانه (CAD) و دستگاه‌های عمومی مانند رایانه‌های شخصی (PC)، تلفن‌های همراه و تلفن‌های هوشمند استفاده می‌شوند. اینترنت بزرگ‌ترین شبکه در جهان است که از اتصال رایانه‌های زیادی به‌هم تشکیل شده‌است. رایانه‌ها می‌توانند به اینترنت متصل شوند و از منابع اطلاعاتی متعدد اینترنت بهره ببرند</p>
+        </div>
+        <div class="column1" lang="ar" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+            <div class="gfg-div">
+                <div class="gfg-logo"></div>
+                <div class="gfg-title">Zanin</div>
+                <div class="gfg-input-fields">
+                    <div class="email" oninput="languageT()">
+                        <input type="text" id="name" name="name" placeholder="ناڤێ تە" required>
+                
+                    </div>
+                    <div class="email" oninput="languageT()">
+                        <input type="email" id="email" name="name" placeholder="ئیمەیڵێ تە" required>
+                      
+                    </div>
+
+                    
+                    <div class="textarea" oninput="languageT()">
+    <textarea id="message" rows="4" cols="40" placeholder="لڤێرە ئاگەهداریا خۆ بنڤیسە" required></textarea>
+    <p id="messageError" style="color: red; display: none;">هیڤیە نامەیا خۆ بنڤیسە</p>
+</div>
+                </div>
+                <button id="mybutton" class="gfg-button" onclick="sendMessage()">هنارتن</button>
+    <p id="confirmationMessage" style="display: none; color: #24668e;"> نامەیا تە هاتە هنارتن</p>            </div>
+        </div>
+    </div>
+   
+
+    <?php
+    include("fotter.php")
+
+    ?>
+ <script>
+        function languageT() {
+            // Your validation logic here
+        }
+
+        function sendMessage() {
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            var validName = name !== '';
+            var validEmail = emailRegex.test(email);
+            var validMessage = message !== '';
+
+            if (!validName) {
+                document.getElementById('name').placeholder = ' هیڤییە ناڤێ خۆ بنڤیسە ';
+            }
+
+            if (!validEmail) {
+                document.getElementById('email').placeholder = ' هیڤیە ئیمەیڵێ خۆ دروست بنڤیسە ';
+                document.getElementById('email').style.borderColor = 'red'; // Change input border color to red
+        document.getElementById('email').value = ''; // Clear the input field
+        document.getElementById('email').placeholder = ' هیڤیە ئیمەیڵێ خۆ دروست بنڤیسە';
+            }
+
+            if (!validMessage) {
+                document.getElementById('message').placeholder = '  تێبینیا خۆ بنڤیسە ';
+            }
+
+            if (validName && validEmail && validMessage) {
+                document.getElementById('mybutton').innerHTML = '...نامەیا تە هاتە هنارتن';
+                
+
+                setTimeout(function () {
+                    location.reload();
+                }, 5000);
+            }
+        }
+    </script>
+
+
+
+    <script>
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+    
+        nameInput.addEventListener('input', function () {
+            if (/[^\x00-\x80]/.test(nameInput.value)) {
+                nameInput.setAttribute('dir', 'rtl');
+            } else {
+                nameInput.setAttribute('dir', 'ltr');
+            }
+        });
+    
+        emailInput.addEventListener('input', function() {
+      if (/[^\x00-\x80]/.test(emailInput.value)) {
+        emailInput.setAttribute('dir', 'rtl');
+      } else {
+        emailInput.setAttribute('dir', 'ltr');
+      }
+    });
+       const textarea = document.getElementById('message');
+textarea.addEventListener('input', function() {
+  const text = this.value;
+  if (/[\u0600-\u06FF]/.test(text)) {
+    this.style.direction = 'rtl';
+    this.style.textAlign = 'right';
+  } else {
+    this.style.direction = 'ltr';
+    this.style.textAlign = 'left';
+  }
+});
+    
+    
+    </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init()
+</script>
