@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="ar">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="style14.css">
+  <link rel="stylesheet" href="dark_theme8.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zanin</title>
+
+  <style>
+    /* Custom CSS for the Open Modal button */
+    .btn.custom-button {
+      background-color: #3498db;
+      /* Button background color */
+      color: #;
+      /*Text color*/
+      padding: 5px 10px;
+      /* Padding around the text */
+      border: none;
+      /* Remove border */
+      border-radius: 5px;
+      /* Add border-radius for rounded corners */
+      cursor: pointer;
+      /* Change cursor on hover */
+      transition: background-color 0.3s ease;
+      /* Add a smooth transition effect */
+
+      /* Add hover effect */
+      &:hover {
+        background-color: #2980b9;
+        /* Darker background color on hover */
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div id="progress">
+
+    <span id="progress-value"></span>
+
+  </div>
+
+  <nav >
+    <div class="menu">
+      <input type="checkbox" name="" id="check">
+      <div class="logo"><a href="#">logo</a></div>
+
+      <ul>
+        <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
+        <li data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><a href="#d"
+            onclick="closeSidebar()"><i class="fa-solid fa-house"></i>دەستپێک</a></li>
+        <li data-aos="fade-down" data-aos-duration="1500"><a href="#bash" onclick="closeSidebar()"><i
+              class="fa-solid fa-rectangle-list"></i>بەش</a></li>
+        <li data-aos="fade-down" data-aos-duration="1000"><a href="#" onclick="closeSidebar()"><i
+              class="fa-solid fa-laptop-code"></i>ژێریا دەستکرد</a></li>
+        <li data-aos="fade-down" data-aos-duration="2000">
+          <a href="#aboutModal" data-toggle="modal" data-target="#aboutModal">
+            <i class="fa-solid fa-user-nurse"></i>دەربارەی
+          </a>
+        </li>
+
+
+        <li data-aos="fade-left" data-aos-duration="2000"><a href="paywandi.php" onclick="closeSidebar()"><i
+              class="fa-solid fa-inbox"></i>پەیوەندی</a></li>
+      </ul>
+
+      <div class="toggle1">
+        <button id="themeToggleBtn" onclick="toggleDarkMode()">
+          <i id="themeIcon" class="fas fa-sun"></i>
+        </button>
+      </div>
+
+      <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+  <!-- Custom Modal -->
+  <!-- Custom Modal with Social Media Icons for دەربارەی Modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">دەربارەی</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-right">
+          <p> ئەز<span> سیداد کرم</span> ڕابوویمە ب دروستکرن و دیزاینکرنا ئەڤی ماڵپەری ژبوو هاریکاریا وان قۆتابیێن ل
+            بەشێن ئای تی ۆ کۆمپیوتەری دخۆینن و وان کەسێن حەزا فێربوونێ بو بەشەک ژ ڤان بەشێن ل ناڤا ئەڤی ماڵپەری دا هەین
+            بکەم،هەروەسا کۆمکرنا پێزانینان و دانانا وان ل ناڤا ئەڤی ماڵپەری دا و ڕوژانە زانیاریێن نوی بهێە زێدەکرن ژوانا
+            ماڵپەر و کورس و پڕۆگرام...هتد </p>
+
+          <div class="d-flex justify-content-center">
+    <div class="card1">
+        <div class="card__img">
+            <img src="full.png" alt="Card Image">
+        </div>
+        <div class="card__avatar">
+            <img src="sed.jpg" alt="Avatar Image">
+        </div>
+       
+           <div class="card__title">Sedad karam</div>
+        <div class="card__subtitle">Web Development</div>
+        <div class="card__wrapper">
+    <a href="viber://chat?number=%2B9647507657402" class="social-icon viber"><i class="fab fa-viber"></i></a>
+    <a href="https://wa.me/9647507657402" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/sedad.karam/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@sedad.dev?_t=8jVAWVmDHT4&_r=1" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+</div>
+        </div>
+       
+    </div>
+</div>
+
+<style>
+  .A{
+    background: rgb(5, 6, 45);
+  }
+    .card1 {
+        --main-color: #000;
+        --submain-color: #78858F;
+        --bg-color: #fff;
+        position: relative;
+        width: 300px;
+        height: 384px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background: var(--bg-color);
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  
+      
+    }
+    .card__wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.card__wrapper a:hover{
+color:wheat;
+text-decoration: none;
+}
+.social-icon.viber {
+    background: #665CAC; /* Viber color */
+}
+
+.social-icon.whatsapp {
+    background: #25D366; /* WhatsApp color */
+}
+.social-icon.tiktok {
+    background: #FF0000; /* TikTok color */
+}
+.social-icon.instagram {
+    background: #E4405F; /* Instagram color */
+}
+
+.social-icon.tiktok {
+    background: #0088cc; /* Telegram color */
+}
+
+.social-icon.facebook {
+    background: #3b5998; /* Facebook color */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 5px; /* Add some margin between icons */
+}
+
+
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    .card__img { background: #24668e;
+        height: 192px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+    }
+
+    .card__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card__avatar {
+        position: absolute;
+        width: 114px;
+        height: 114px;
+        background: var(--bg-color);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: calc(50% - 57px);
+        overflow: hidden;
+    }
+
+    .card__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card__title {
+        margin-top: 60px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #24668e;
+    }
+
+    .card__subtitle {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 15px;
+        color: var(--submain-color);
+    }
+
+    .card__btn {
+        margin-top: 15px;
+        width: 76px;
+        height: 31px;
+        border: 2px solid var(--main-color);
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 11px;
+        color: var(--main-color);
+        background: var(--bg-color);
+        text-transform: uppercase;
+        transition: all 0.3s;
+    }
+
+    .card__btn-solid {
+        background: var(--main-color);
+        color: var(--bg-color);
+    }
+
+    
+</style>
+
+          <style>
+            #aboutModal .modal-body span {
+              font-weight: bold;
+              color: #e44d26;
+            }
+
+            #aboutModal .social-media-icons a {
+
+              margin-bottom: 10px;
+              text-decoration: none;
+              margin-left: 10px;
+
+            }
+          </style>
+          <!-- Additional content goes here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text">
+  </div>
+
+  <!-- text bxo  -->
+  <div class="atext">
+    <div class="wrapper">
+      <svg>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          تو بخێرهاتی بۆ ماڵپەرێ زانین
+        </text>
+      </svg>
+    </div>
+  </div>
+
+  <div class=" h-100 d-flex align-items-center justify-content-center">
+    <div class="dastpek" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+      <p id="d">دەستپێکەک بۆماڵپەری</p>
+      <style>
+        .dark-theme .dastpek {
+          box-shadow: none;
+        }
+      </style>
+    </div>
+  </div>
+
+  <!-- Add this link in your HTML to include Bootstrap CSS -->
+
+  <div class="row1">
+    <div class="column1" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+      <img src="first.png" alt="Image" width="500px">
+    </div>
+    <div class="column1" lang="ar" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+      <p id="paragragh">
+
+
+
+        ڕێکا خۆ یا فێربوونێ ل گەل ماڵپەڕێ زانین دەستپێبکە، ماڵپەرێ زانین مەزنترین و پڕبەشترین ماڵپەرە ل بادینان دا، هەر
+        بەشەکێ ل ناڤ ماڵپەرێ زانین دا ژ چەندین ژێدەران و ڕێکێن فێربوونێ پێکدهێت کو دێ بنە باشترین ڕێنیشاندەر هەر ژ
+        دەستپێکا گەشتا تە یا فێربوونێ تا ئاستەکێ هەرە باش ...
+
+
+
+
+
+        <style>
+          .dark-theme .column1 #paragragh {
+            box-shadow:
+              /* inset -3px -3px 30px black,  */
+              inset 3px 3px 5px black;
+          }
+        </style>
+        <span class="additional-text" style="display: none;">
+          <!-- Additional text goes here -->
+        </span><br>
+        <a href="#" id="read-more" class="btn custom-button" data-toggle="modal" data-target="#myModal">زێدەتر</a>
+      </p>
+    </div>
+  </div>
+  <style>
+    #read-more {
+      background-color: #24668e;
+      color: white;
+      padding: 5px 10px;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    #read-more:hover {
+      background-color: #00355d;
+    }
+  </style>
+
+
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mr-auto" id="myModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-right">
+          <!-- Initial text before clicking زێدەتر -->
+          <p style="font-family:rabar; font-weight:bold">ڕوژانە کار ل سەر ماڵپەرێ زانین دهێتەکرن ژبوو زێدەکرنا ژێدەر و
+            بابەتێن نوی ل ناڤ ماڵپەری دا ژبو وێ چەندێ ماڵپەر بەردەوام یێ پڕبیت ژ ژێدەر و زانیارییێن نوی</p>
+
+          <!-- Display the additional text here -->
+          <span class="additional-text-modal"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" h-100 d-flex align-items-center justify-content-center">
+    <div class="bash" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+      <p id="bash"> بەش</p>
+    </div>
+  </div>
+  <style>
+    .dark-theme .bash {
+      box-shadow: none;
+    }
+  </style>
+
+
+  <?php
+  include("db_connection.php");
+
+  $sql = "SELECT * FROM courses";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    echo '<div class="card-container h-100 d-flex align-items-center justify-content-center">';
+
+    while ($row = $result->fetch_assoc()) {
+      echo '<div class="card" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">';
+      echo '<img src="' . $row["image_url"] . '" alt="">';
+      echo '<div class="content">';
+      echo '<div class="text-content">';
+      echo '<h2 id="m">' . $row["title"] . ' </h2>';
+      echo '<a href="details.php?id=' . $row["id"] . '&category=' . $row["category"] . '"> <button class="neumorphic-button">دیتن</button></a>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+    }
+
+    echo '</div>'; // Close the card-container
+  } else {
+    echo "0 results";
+  }
+
+  $conn->close();
+  ?>
+
+  <!-- fotter -->
+  <!-- Counter -->
+  <footer>
+
+    <div class="content">
+      <div id="visitor-info" class="custom-design">
+        <?php
+        $counterFile = 'counter.txt';
+        $count = (file_exists($counterFile)) ? (int) file_get_contents($counterFile) : 0;
+        $count++;
+        file_put_contents($counterFile, $count);
+
+        echo '<p>   : ژمارا سەرادانێن ماڵپەری <strong><br>' . $count . '</strong></p>';
+        ?>
+      </div>
+
+      <div class="top">
+        <div class="logo-details">
+
+          <div class="texn">Zanin</div>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/samsung.hd.142?mibextid=LQQJ4d" class="fb" data-aos="fade-right" data-aos-duration="500"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/sedad.karam/" class="insta" data-aos="fade-down" data-aos-duration="1000"><i class="fab fa-instagram"></i></a>
+          <a href="viber://chat?number=%2B9647507657402" class="viber" data-aos="fade-up" data-aos-duration="1500"><i class="fab fa-viber"></i></a>
+          <a href="https://www.tiktok.com/@sedad.dev?_t=8jVAWVmDHT4&_r=1" class="tiktok" data-aos="fade-left" data-aos-duration="2000"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="alternate-link-boxes">
+        <div class="box-container" data-aos="fade-right" data-aos-duration="2000">
+          <div class="box1">
+            <h3>پەیوەندی</h3>
+            <ul>
+              <li id="list">
+
+                <i class="fas fa-envelope"></i> asedo.kamai@gmail.com
+                </a>
+
+              </li>
+              <li>
+                <a href="viber://chat?number=%2B9647507657402">
+                  <i class="fas fa-phone"></i> +964 750 765 74 02
+              </li></a>
+              <li id="list">
+
+                <i class="fas fa-map-marker-alt"></i> کوردستان-العراق
+                </a>
+                <style>
+                  .dark-theme #list {
+                    color: #009dff;
+                  }
+                </style>
+              </li>
+            </ul>
+          </div>
+
+          <div class="box2" data-aos="fade-left" data-aos-duration="2000">
+            <h3>بەش</h3>
+            <ul>
+              <li><a href="web.php">وێب دیزاین</a></li>
+              <li><a href="graphic.php">گرافیک دیزاین</a></li>
+              <li><a href="#">کورسێن پرۆگرامینگێ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="call-to-action" data-aos="fade-up" data-aos-duration="2000">
+          <p>بو هەر تێبینیەک وپێشنیارەک یان زێدەهیەکێ مە ئاگەهدار بکە</p>
+          <a href="paywandi.php" class="action-button">کلیک بکە</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text" id="copy">
+
+          ماڵپەر هاتیە دروست کرن و دیزاین و ئامادەکرن ژلایێ <br>
+          <a href="https://www.instagram.com/sedad.karam/?hl=en"><span class="additional-text"
+              style="color: #00355d;">sedad.karam</span></a></a>
+          <br><br>
+          <span class="additional-text1" style="color:red">هەمی ماف د پاراستینە </span></a>
+        </span>
+        <span class="policy_terms">
+        </span>
+      </div>
+    </div>
+
+
+  </footer>
+
+  
+<script>
+  //  bo grtna slide bar  
+  function closeSidebar() {
+    document.getElementById('check').checked = false;
+  }
+</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init()
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </script>
+  <script src="script2.js"></script>
+ 
+  <script>
+  $('#aboutModal, #myModal').on('show.bs.modal', function () {
+    $('body').addClass('modal-open');
+    $('nav .menu').addClass('invisible');
+  });
+
+  $('#aboutModal, #myModal').on('hidden.bs.modal', function () {
+    $('body').removeClass('modal-open');
+    $('nav .menu').removeClass('invisible');
+  });
+</script>
+
+<script>
+  
+</script>
+  <script>
+  </script>
+</body>
+</html>
