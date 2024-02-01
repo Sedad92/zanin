@@ -1,0 +1,1790 @@
+html{
+
+    overflow-x: hidden;
+}
+
+
+
+@font-face {
+    font-family: rudaw;
+    src: url('rudawregular2.ttf') format('woff');
+}
+
+@font-face {
+    font-family: rabar;
+    src: url('Rabar_009.ttf') format('woff');
+}
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+:root {
+    --colorMain: #c0c0c0;
+    --brShadow: -6px 6px 15px rgba(0, 0, 0, 0.5);
+    --tlShadow: 6px -6px 15px rgba(255, 255, 255, 0.8);
+    --main-bg-color: #ecf0f3;
+    --main-text-color: #333;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+    --link-color: #24668e;
+}
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+ 
+    font-size: 16px; /* Base font size for the body */
+}
+
+/* scroll bar progress */
+#progress{
+    z-index: 2;
+    color: #24668e;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        
+        display: grid;
+        place-items: center;
+    }
+    #progress-value{ box-shadow: inset -3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+    background-color: #ecf0f3;
+        display: block;
+        height:55px;
+        width: 55px;
+        border-radius: 50%;
+        font-weight: bold;
+        display: grid;
+        place-items: center;
+    
+    }
+
+
+
+/* scrool */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #4F8FC0; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #153f5f; 
+}
+
+nav .menu{
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #ecf0f3;
+    z-index: 10000;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+    visibility: visible;
+  }
+
+  nav .menu.invisible {
+    visibility: hidden; /* Make the navigation bar invisible when the modal is open */
+  }
+.menu .logo a{
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #31344b;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    
+}
+.menu ul a{   
+    
+    font-family: rudaw;
+    margin:0 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #4F8FC0;
+    font-weight: bold;
+    display: inline-flex;
+    padding: 10px 12px;
+box-shadow: -3px -3px 7px #ffffff,
+            3px 3px 5px #ceced1;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu ul a:hover:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+}
+
+.menu ul a:hover{
+    color: #3498db;
+}
+nav label.button{
+    color: #31344b;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+nav label.cancel{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    
+}
+#check{
+display: none;
+}
+@media (max-width:940px) {
+    .menu ul{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    max-width: 400px;
+    padding-top: 45px;
+    height: 100%;
+    background: #ecf0f3;
+    box-shadow: 0 5px 10px #b0b0b5;
+    z-index: 12;
+    transition: all 0.3s ease;
+    }
+    .menu ul a{
+        display: block;
+        font-size: 23px;
+        width: 98%;
+        margin-top: 30px;
+        overflow: hidden;
+        text-align: center;
+    
+    }
+    
+    nav label.bars{
+        display: block; 
+    }
+    #check:checked ~ label.bars{
+        display: none;
+    }
+    #check:checked ~ ul label.cancel{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+/* ava boxa text ya */
+.text {
+
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+
+}
+
+.text:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+        box-shadow: inset -3px -3px 7px #ffffff,
+            inset 3px 3px 5px #ceced1;
+}
+
+
+/* ava text bxoya  aw size zeda boy jvere ya  */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap");
+
+svg { 
+    
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 75px;
+}
+svg text::selection{
+    background-color:whitesmoke;
+}
+
+svg text {
+
+    animation: stroke 5s infinite alternate;
+
+    stroke: #3498db;
+
+    font-weight: bold;
+    font-family: rudaw;
+    
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 0.5;
+    }
+
+    100% {
+        fill: #3498db;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+.atext {
+    position: relative;
+    margin-right: 10px;
+    
+
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    top: -190px;
+}
+
+/* text d boxe da  */
+@media(max-width:1150px) {
+    svg{
+        font-size:90px ;
+    }
+
+}
+@media(max-width:1020px) {
+    svg{
+        font-size:78px ;
+    }
+}
+@media(max-width:900px) {
+    svg {
+        text-align: center;
+        font-size: 60px;
+        transform: translateX(-5px);
+        transform: translateY(-10px);
+
+
+    }
+
+}
+
+@media(max-width:700px) {
+    svg{
+        font-size: 45px;
+    }
+
+}
+@media(max-width:520px) {
+
+    svg{
+        font-size: 40px;
+    }
+
+}
+@media(max-width:450px) {
+    svg{
+        font-size: 32px;
+    }
+
+}
+
+@media(max-width:420px) {
+    svg{
+        font-size: 28px;
+    }
+
+}
+@media(max-width:370px) {
+    svg{
+        font-size: 23px;
+    }
+}
+@media(max-width:300px) {
+    svg{
+        font-size: 20px;
+    }
+}
+@media(max-width:200px) {
+    svg{
+        font-size: 10px;
+
+
+    }
+}
+
+
+/* circle */
+/* .box1 {
+    position: absolute;
+    z-index: 0.5;
+    right: 100px;
+    top: 35%;
+    width: 50px;
+    height: 50px;
+    background: #e0e5ec;
+    box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+        -9px -9px 16px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+@media (max-width: 900px) {
+
+    .box1{
+
+        position: absolute;
+        transform: translateY(-150px);
+    
+        
+        
+    }
+    .box4{
+        transform: translateY(-170px);
+
+    }
+}
+
+.box4 {
+    position: absolute;
+    top: 37%;
+    left: 60px;
+    width: 50Px;
+    height: 50px;
+    background: #e0e5ec;
+    box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+        -9px -9px 16px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+@media (max-width: 900px) {
+    .box4{
+        transform: translateY(-170px);
+
+    }
+}
+@media (max-width: 700px) {
+
+    .box1{
+        
+        transform: translateY(-150px);
+    }
+
+}
+@media (max-width: 520px) {
+
+    .box1{
+            
+        
+
+    }
+
+} */
+
+
+
+/* ava bo darbaray o image  */
+/* farax ya veraya width */
+
+.dastpek{
+    
+    border-radius: 10px;
+    width: 25%;
+    height: 60px;
+    padding: 8px;
+    color: #3498db;
+    /* background-color: #3498db; */
+    font-size: 30px;
+    font-weight: bold;
+    font-family: rudaw;
+    text-align: center;
+    margin-top: 50px;
+
+    box-shadow: inset -3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+
+}
+@media screen and (min-width: 1024px){
+
+    .dastpek{
+        width: auto;
+    }
+}
+    
+@media screen and (max-width: 1024px){
+
+    .dastpek{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+.dastpek{
+    font-size: 25px;
+    width: 35%;
+    padding-top: 15px;
+}
+}
+
+@media screen and (max-width: 700px){
+
+    .dastpek{
+    font-size: 20px;
+    padding-top: 20px;
+    width: 40%;
+    }
+}
+
+@media screen and (max-width: 520px){
+
+    .dastpek{
+    font-size:1.4rem;
+    padding-top: 20px;
+    width: 63%;
+    }
+}
+
+@media screen and (max-width: 355px){
+
+    .dastpek{
+    font-size: 20px;
+    padding-top: 20px;
+    width: 65%;
+    }
+} @media screen and (max-width: 300px){
+
+    .dastpek{
+    font-size: 15px;
+    padding-top: 20px;
+    width: 70%;
+    }
+}
+
+
+
+
+.darbaray {
+    border-radius: 10px;
+    width: 25%;
+    height: 60px;
+    padding: 8px;
+    color: #3498db;
+    /* background-color: #3498db; */
+    font-size: 30px;
+    font-weight: bold;
+    font-family: rudaw;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 35%;
+    box-shadow: inset -3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+
+
+}
+@media screen and (min-width: 1024px){
+
+    .darbaray{
+        width: 30%;
+    }
+}
+    
+@media screen and (max-width: 1024px){
+
+    .darbaray{
+        width: 35%;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+        .darbaray{
+            width: 40%;
+            margin-left: 30%;
+            align-items:center ;
+            justify-content: center;
+            
+        }
+    
+}
+@media screen and (max-width:700px) {
+    .darbaray{
+        width: 55%;
+        align-items:center ;
+        justify-content: center;
+        position: relative;
+        right: 45px;
+            
+        
+
+    }
+
+}
+@media screen and (max-width:520px) {
+.darbaray{
+
+    position: relative;
+    right: 70px;
+    width: 70%;
+}
+
+}
+@media screen and (max-width:400px) {
+.darbaray{
+
+    position: relative;
+    width: 55%;
+    font-size: 18px;
+    left: -40px;
+    text-align: center;
+    align-items: center;
+
+    padding-top: 16px;
+
+}
+}
+/*  */
+
+#paragragh{
+    box-shadow: 10px 10px 10px -1px rgba(10, 90, 169, 0.16),
+    -10px -10px 20px -1px rgba(255, 255, 255, 0.70);
+
+    text-align: justify;
+    height: auto;
+    padding: 30px 40px;
+    transition: 1s ease-out;
+    border-radius: 20px;
+    color: #4F8FC0;
+    font-weight: bold;
+    font-family: rabar;
+    font-size: 16px;
+
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the columns horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.column1 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center the text */
+}
+
+.column1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.column1 p {
+
+    font-size: 18px;
+    font-family: rabar;
+    line-height: 2;
+    text-align: left; /* Align text to the left by default */
+}
+@media (max-width: 900px) {
+
+    .column1 {
+        flex: 100%;
+        max-width: 100%;
+    }
+    #paragragh{
+        font-size: 14px;
+    }
+    .column1 img {
+        max-width: 80%;
+        display: block;
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .column1 {
+    flex: 100%;
+    max-width: 100%;
+    }
+    #paragragh{
+        font-size: 14px;
+    }
+    
+    .column1 img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    }
+
+    .column1 p {
+    font-size: 16px;
+    font-size: 14px;
+
+    text-align: left; 
+    }
+}
+
+@media (max-width: 480px) {
+    .column1 img {
+    max-width: 100%;
+    }
+    #paragragh{
+        font-size: 14px;
+    }
+    .column1 p {
+    
+    font-size: 14px;
+    text-align: right; 
+    }
+}
+
+/* Additional styles for Arabic text */
+.column1[lang="ar"] p {
+    text-align: right;
+    direction: rtl; /* Set the text direction to right-to-left */
+}
+
+
+.bash {
+    border-radius: 10px;
+    width: 15%;
+    height: 60px;
+    padding-top: 10px;
+    color: #3498db;
+    /* background-color: #3498db; */
+    font-size: 25px;
+    font-weight: bold;
+    font-family: rudaw;
+    text-align: center;
+    margin-top: 65px;
+    box-shadow: inset -3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+          margin-left: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .bash {
+        width: 30%;
+    font-size: 25px;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bash {
+      
+    font-size: 30px;
+
+    }
+}
+
+/* Additional adjustments for smaller screens can be made as needed */
+
+/* cards  */
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+    margin-left: 2rem;
+    
+}
+
+.card {
+    
+    font-weight: bold;
+    font-family: rudaw;
+    
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #ebeef1;
+    box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+
+        position: relative;
+        transition: 1s ease-out;    
+
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+#english{
+    font-size: 20px;
+}
+
+.card:hover {
+    transform: translate(-5px, -5px);
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {font-family: rudaw;
+    margin: 0;
+    float: right;
+    font-size: 20px;
+    color: #24668e;
+}
+.dark-theme h2{
+    color: #009dff;
+}
+
+
+.neumorphic-button {
+    background-color: #4e79fb;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.neumorphic-button:hover {
+    background-color: #366ac2;
+}
+@media (max-width: 1199.98px) {
+    .card{
+        margin: 0 auto;
+        height: auto;
+        width: 45%;
+        
+    }   
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .card {
+    
+        margin: 0 auto;
+        height: auto;
+        width: 45%;
+    
+    
+    }
+    .neumorphic-button{
+        margin: auto;
+        height: auto;
+    }
+
+
+
+}
+@media screen and (max-width: 768px) {
+    .card {
+    
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+    
+    
+    }
+    h2{
+        font-size:26px ;
+
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+    
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+    
+    
+    }
+    h2{
+        font-size:26px ;
+
+    }
+    #course{
+        font-size:18px ;
+        margin-top: 10px;
+    
+    }
+    #english{
+        font-size:17px ;
+        margin-top: 10px;
+
+
+
+    }
+
+
+}
+/* boch?? */
+/* Default styles for .bochi */
+.bochi {
+  font-family: speda;
+  padding: 20px;
+  color: #24668e;
+  direction: rtl;
+  text-align: right;
+  border-radius: 15px;
+  box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+  transition: all 0.3s ease-in-out;
+  max-width: 600px;
+  margin: 70px auto 0;
+  margin-top: 100px;
+}
+
+/* Styles for h3 within .bochi */
+.bochi h3 {
+  color: #194b6a;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styles for p within .bochi */
+.bochi p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .bochi {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 15px; /* Adjust padding */
+    margin: 40px auto 0;
+    margin-top: 100px; /* Adjust margin-top */
+  }
+
+  .bochi h3 {
+    font-size: 20px; /* Adjust heading font size for smaller screens */
+    margin-top: 15px; /* Adjust margin-top */
+    margin-bottom: 8px; /* Adjust margin-bottom */
+  }
+
+  .bochi p {
+    font-size: 14px; /* Adjust paragraph font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin-bottom */
+  }
+}
+
+/* Additional media queries for even smaller screens if needed */
+@media screen and (max-width: 480px) {
+  .bochi {
+    font-size: 14px;
+    padding: 10px;
+    margin: 30px auto 0;
+  }
+
+  .bochi h3 {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+  .bochi p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+
+
+/* circle box */
+
+/* fotter */
+
+
+footer{ 
+    margin-top: 50px;
+box-shadow: inset -3px -3px 7px #ffffff,
+inset 3px 3px 5px #ceced1;
+width: 100%;
+bottom: 0;
+left: 0;
+font-family: speda;
+}
+footer .content{
+max-width: 1250px;
+margin: auto;
+padding: 30px 40px 40px 40px;
+}
+/* ava zanin o logo  */
+footer .content .top{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 100px;
+}
+.content .top .logo-details{
+color: black;
+font-size: 30px;
+}
+.content .top .media-icons{
+display: flex;
+}
+.content .top .media-icons a{
+background: #ecf0f3;
+position: relative;
+height: 60px;
+width: 60px;
+margin: 0 10px;
+display: inline-flex;
+text-decoration: none;
+border-radius: 50%;
+
+box-shadow: -3px -3px 7px #ffffff,
+3px 3px 5px #ceced1;
+
+}
+.media-icons a:hover::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+border-radius: 50%;
+background: #ecf0f3;
+box-shadow: inset -3px -3px 7px #ffffff,
+            inset 3px 3px 5px #ceced1;
+}
+.media-icons a i{
+position: relative;
+z-index: 3;
+text-align: center;
+width: 100%;
+height: 100%;
+font-size: 25px;
+line-height: 60px;
+}
+.media-icons a:hover i{
+
+transform: scale(0.9);
+}
+.icons a:hover i{
+transform: scale(0.9);
+}
+.media-icons .fb{
+color: #4267B2;
+}
+.media-icons .insta{
+color: #E1306C;
+}
+.media-icons .viber{
+color: #59267c;
+}
+.media-icons .tiktok{
+color: #FF0000;
+}
+
+footer .content .link-boxes{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+footer .content .link-boxes .box{
+width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+    color: #26648e;
+font-size: 22px;
+font-weight: 400;
+margin-bottom: 10px;
+font-family: rudaw;
+position: relative;
+}
+/* aw xata dbn bash... */
+/* .link-boxes .box .link_name::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: -2px;
+height: 2px;
+width: 35px;
+background: #080404;
+} */
+
+.link_name:not(.link1)::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: -2px;
+height: 2px;
+width: 35px;
+background: #080404;
+
+}
+.logo_name{
+    transition: 2s ease-in;
+}
+
+
+.content .link-boxes .box li{
+margin: 6px 0;
+list-style: none;
+
+}
+.content .link-boxes .box li a{
+color: #26648e;
+font-size: 14px;
+font-weight: bold;
+text-decoration: none;
+opacity: 0.8; 
+transition: all 0.4s ease;
+
+}
+.link1{
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.link1::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+.link1:hover::after{
+    
+    width: 100%;
+}
+.content .link-boxes .box li a:hover{
+opacity: 1;
+text-decoration: none;
+}
+.content .link-boxes .input-box{
+margin-right: 55px;
+}
+
+.link-boxes .input-box input::placeholder{
+color: #AFAFB6;
+font-size: 16px;
+}
+
+.input-box input[type="button"]:hover{
+opacity: 1;
+}
+footer .bottom-details{
+width: 100%;
+box-shadow: -3px -3px 7px #ffffff,
+3px 3px 5px #ceced1;
+
+}
+footer .bottom-details .bottom_text{
+    bottom: 0;
+max-width: 1250px;
+margin: auto;
+padding: 20px 40px;
+display: flex;
+align-items: center;
+
+justify-content: center;
+
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+font-size: 14   px;
+font-weight: 300;
+color: #24668e;
+text-decoration: none;
+font-family: rabar;
+font-size: 16px;
+
+}
+.bottom-details .bottom_text a{
+color: #4267B2;
+font-weight: bold;
+}
+.bottom-details .bottom_text a:hover{
+opacity: 1;
+text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+margin-right: 10px;
+}
+
+
+
+
+@media (max-width: 900px) {
+footer .content .link-boxes{
+    flex-wrap: wrap;
+}
+footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+}
+}
+@media (max-width: 700px){
+footer{
+    position: relative;
+}
+.content .top .logo-details{
+    font-size: 26px;
+}
+.content .top .media-icons a{
+    height: 55px;
+    width: 55px;
+    font-size: 14px;
+    line-height: 35px;
+}
+footer .content .link-boxes .box{
+    width: calc(100% /2.5 - 10px);
+}
+footer .content .link-boxes .input-box{
+    width: 60%;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+    font-size: 14px;
+}
+}
+@media (max-width: 520px){
+footer::before{
+    top: 145px;
+}
+footer .content .top{
+    flex-direction: column;
+}
+.content .top .media-icons{
+    margin-top: 16px;
+}
+footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+}
+footer .content .link-boxes .input-box{
+    width: 100%;
+}
+}
+
+.a{
+border-radius: 20px;
+    box-shadow: -3px -3px 7px #ffffff,
+    3px 3px 5px #ceced1;
+
+}
+
+
+
+#hnartn{
+    padding: 10px 12px;
+}
+
+#put{
+    color: #26648e;
+    border: none;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-weight: bold;
+    padding: 10px 40px;
+    box-shadow: -3px -3px 7px #ffffff,
+    3px 3px 5px #ceced1;    
+    padding-bottom: 10px;
+}
+
+#put:hover{
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ceced1;
+}
+
+.frekrn{
+
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: -3px -3px 7px #ffffff,
+    3px 3px 5px #ceced1;}
+
+
+.frekrn #frekrn{
+    text-align: center;
+    color: #26648e;
+    padding: 16px 15px;
+    font-family: rudaw;
+}
+.frekrn #put{
+    margin-left: 35%;
+    font-family: rudaw;
+}
+
+@media (max-width:900px){
+
+
+    .frekrn{
+        width:40%;
+    }
+    #frekrn{
+        text-align: center;
+        flex-wrap: wrap;
+
+    }
+    #put{
+        transform: translatex(-22px);
+
+    }
+
+}
+@media (max-width:700px){
+    .frekrn{
+        width: 100%;
+    }
+    #frekrn{text-align: center;
+        margin-left: 20px;
+        flex-wrap: wrap;
+        font-size: 22px;
+    }
+    #put{
+        transform: translatex(20px);
+
+    }
+
+
+}
+
+@media (max-width:520px){
+    .frekrn{
+        width: 100%;
+    }
+    #frekrn{
+        flex-wrap: wrap;
+        font-size: 20px;
+    }
+    #put{
+        transform: translatex(-15px);
+    }
+
+}
+
+.menu ul li i{
+    margin-right: 3px;
+}
+
+
+#maf{
+    padding-left: 150px;
+
+    color: red;
+}
+
+
+/*  */
+
+
+@media (max-width: 480px) {
+    html{
+        font-size: 16px;
+    }
+    
+   
+}
+
+/* Base styles for the boxes */
+/* Base styles for the boxes */
+.alternate-link-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; /* Center items initially */
+}
+
+.box-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+
+.call-to-action {
+    text-align: center;
+    margin-top: 20px;
+    flex: 1 1 100%;
+    max-width: 100%;
+    color: #24668e;
+    font-family: speda;
+
+}
+
+.call-to-action p {
+    font-size: 18px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+}
+
+/* Media query for responsiveness */
+@media screen and (min-width: 768px) {
+    .box-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        margin-top: 20px;
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+
+    .call-to-action {
+        flex: 0 1 100%;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    
+}
+
+
+
+.box1,
+.box2 {
+    width: calc(50% - 20px); /* Considering 20px for gap (adjust as needed) */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* Add additional styling as needed */
+    box-sizing: border-box;
+    float: left;
+}
+
+/* Style for the box1 and box2 title */
+.box1 h3,
+.box2 h3 {
+    font-size: 20px;
+
+    margin-top: 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Style for the box1 and box2 list items */
+.box1 ul,
+.box2 ul {
+    list-style: none;
+    padding: 0;
+
+}
+.box1 ul,.box2 ul,
+.box1 h3,.box2 h3{
+    margin-left: 180px;
+}
+
+.box1 ul li,
+.box2 ul li {
+    margin-bottom: 8px;
+}
+
+.box1 ul li a,
+.box2 ul li a {
+    text-decoration: none;
+    color: #24668e;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+#list{
+    color: #24668e;
+}
+.box1 ul li a:hover,
+.box2 ul li a:hover {
+    color: #007bff;
+    /* Change color on hover as desired */
+}
+
+/* New styles for centering the boxes on wrap */
+.alternate-link-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; /* Center items initially */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 767px) {
+    .box1,
+    .box2 {
+        width: 100%; /* Boxes take full width when wrapped */
+        margin-right: 0; /* Remove margin to avoid unnecessary space */
+        margin-bottom: 20px; /* Add space between the boxes */
+    }
+    .box1 ul li,
+    .box2 ul li,
+    .box1 h3,
+    .box2 h3 {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .box1,
+    .box2 {
+        width: 100%;
+        padding: 15px; /* Adjust padding for smaller screens */
+        box-sizing: border-box;
+        float: none; /* Remove float for better responsiveness */
+    }
+    
+    .box1 h3,
+    .box2 h3 {
+        margin-left: 0; /* Remove margin for heading alignment */
+        text-align: right; /* Center the headings */
+    }
+    
+    .box1 ul,
+    .box2 ul {
+        margin-left: 0; /* Remove margin for list items */
+    }
+    
+    .box1 ul li,
+    .box2 ul li {
+        margin-bottom: 10px; /* Adjust margin between list items */
+    }
+    
+    .box1 ul li a,
+    .box2 ul li a {
+        text-align: center; /* Center the text in list items */
+    }
+    
+    .call-to-action p {
+        text-align: center; /* Center the text in call-to-action */
+    }
+}
+
+
+
+
+/* General Styles */
+.bottom-details {
+    text-align: center;
+    padding: 20px;
+    max-height: 150px;
+    overflow: hidden;
+  }
+  
+  .bottom_text {
+    font-family: rudaw;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Copyright Text Styles */
+  .bottom_text .copyright_text {
+    font-size: 16px;
+  }
+  
+  .bottom_text .copyright_text a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* Additional Text Styles */
+  .additional-text {
+    font-weight: bold;
+    color: #4F8FC0;
+
+  }
+  
+  /* Maf Text Styles */
+  #maf {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .call-to-action p {
+        font-size: 15px;
+    }
+    /* Adjustments for smaller devices */
+    .bottom_text .copyright_text {
+      font-size: 14px;
+    }
+    .bottom-details {
+    max-height: none; /* Reset max-height for smaller screens */
+    overflow: visible; /* Allow content to be fully visible on smaller screens */
+  }
+  }
+  
+/* Neumorphic styling for #visitor-info */
+#visitor-info {
+    color: #24668e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    margin: 20px auto; /* Set margin to center horizontally */
+    max-width: 400px; /* Optionally set a maximum width */
+    width: 90%; /* Optionally make it 90% width */
+    font-family: rudaw;
+    box-shadow: inset 0px 0px 0px #24668e; 
+    animation: pulseShiftBoxShadow 4s linear infinite; /* Add animation for continuous pulsating and shifting shadow */
+}
+
+.dark-theme #visitor-info {
+    box-shadow: inset 0px 0px 0px #24668e; 
+    animation: pulseShiftBoxShadow 4s linear infinite; /* Add animation for continuous pulsating and shifting shadow */
+}
+
+@keyframes pulseShiftBoxShadow {
+    0%{
+        box-shadow: inset -10px 3px 10px #24668e, inset 0px 0px 0px #24668e;
+
+    }
+    25% {
+        box-shadow: inset 10px -3px 10px #24668e, inset 0px 0px 0px #24668e;
+    }
+    50% {
+        box-shadow: inset 10px 3px 5px #24668e, inset 0px 0px 0px #24668e;
+    }
+    75% {
+        box-shadow: inset -10px 3px 10px #24668e, inset 0px 0px 0px #24668e;
+    }
+    100%{
+        box-shadow: inset -10px 3px 10px #24668e, inset 0px 0px 0px #24668e;
+        
+    }
+}
+
+.dark-theme #visitor-info {
+    box-shadow: inset 0px 0px 0px #24668e,
+                inset 10px 3px 5px #24668e; 
+    transition: box-shadow 0.3s ease; /* Add transition for box-shadow */
+}
+
+#visitor-info strong {
+    font-size: 24px;
+}
+
+.custom-design p {
+    margin: 0;
+}
+
+/* Your existing styles... */
+
+/* Responsive styles for visitor-info */
+.custom-design {
+    text-align: center;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    #visitor-info  {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+}
+
+/* For medium screens */
+@media (max-width: 767px) and (min-width: 480px) {
+    #visitor-info  {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 479px) {
+    #visitor-info  {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+    /* visitor  */
+    
+
+    /* modal */
+
+    #aboutModal .modal-dialog {
+        max-width: 600px; /* Adjust the maximum width as needed */
+      }
+      
+      #aboutModal .modal-content {
+        border-radius: 10px;
+      }
+      
+      #aboutModal .modal-header {
+        background-color: #24668e;
+        color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      
+      #aboutModal .modal-title {
+        margin: 0;
+      }
+      
+      #aboutModal .modal-body {
+        padding: 20px;
+        font-family: speda;
+        color: #24668e;
+      }
+      
+      #aboutModal .close {
+        color: #fff;
+      }
+      
+      #aboutModal .modal-body p {
+        margin-bottom: 15px;
+      }
+      
+      #aboutModal.modal.fade.show {
+        backdrop-filter: blur(8px); /
+      }
+      
+      
+          /* Move toggle button to inside .toggle1 on smaller screens */
+          @media only screen and (max-width: 768px) {
+            .menu .toggle1 {
+              display: block;
+            }
+      
+            .menu ul>.toggle1 {
+              order: -1;
+              /* move button before other list items */
+            }
+          }
+      
+          body.dark-theme .modal-body {
+            color: black;
+            /* Green text color for the link in dark mode */
+          }
+          
+  /* Custom Modal Styles with Blurred Background */
+#myModal.modal.fade.show {
+  display: flex !important; /* Override Bootstrap's display property for the fade class */
+  backdrop-filter: blur(8px); /* Adjust the blur strength as needed */
+}
+
+#myModal .modal-dialog {
+  max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+#myModal .modal-content {
+  border-radius: 10px;
+}
+
+#myModal .modal-header {
+  background-color: #24668e;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#myModal .modal-title {
+  margin: 0;
+}
+
+#myModal .modal-body {
+  padding: 20px;
+}
+
+#myModal .close {
+  color: #fff;
+}
+
+#myModal .modal-body p {
+  margin-bottom: 15px;
+}
+
+#myModal.modal.fade.show {
+    display: flex !important;
+    /* Override Bootstrap's display property for the fade class */
+    backdrop-filter: blur(8px);
+    /* Adjust the blur strength as needed */
+  }
+
+  #myModal .modal-dialog {
+    max-width: 600px;
+    /* Adjust the maximum width as needed */
+  }
+
+  #myModal .modal-content {
+    border-radius: 10px;
+  }
+
+  #myModal .modal-header {
+    background-color: #24668e;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  #myModal .modal-title {
+    margin: 0;
+  }
+
+  #myModal .modal-body {
+    padding: 20px;
+    color: #24668e;
+  }
+
+  #myModal .close {
+    color: #fff;
+  }
+
+  #myModal .modal-body p {
+    margin-bottom: 15px;
+  }
+  #aboutModalLabel{
+    font-family: speda;
+  }     
